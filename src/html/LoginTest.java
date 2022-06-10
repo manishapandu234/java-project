@@ -29,7 +29,6 @@ public class LoginTest {
 			driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 			driver.findElement(By.name("txtPassword")).sendKeys("admin123");
 			driver.findElement(By.name("Submit")).click();
-			driver.findElement(By.id("menu_admin_viewAdminModule")).click();
 			int size_menu=driver.findElements(By.className("main_menu_first_level_list_item")).size();
 	        System.out.println(size_menu);
 	        int Even_rows=driver.findElements(By.className("Even")).size();
