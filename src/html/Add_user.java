@@ -28,6 +28,7 @@ public class Add_user {
 		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 		driver.findElement(By.name("txtPassword")).sendKeys("admin123");
 		driver.findElement(By.name("Submit")).click();
+		
 
 }
 
