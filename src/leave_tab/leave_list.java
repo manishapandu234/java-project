@@ -17,6 +17,7 @@ public class leave_list {
 		 System.setProperty("webdriver.chrome.driver","D://manisha//chromedriver.exe");
         WebDriver driver=new ChromeDriver();
 			driver.get("https://opensource-demo.orangehrmlive.com/");
+			driver.manage().window().maximize();
 			String title=driver.getTitle();
 			System.out.println(title);
 			System.out.println("this is title of our title of our page--->"+driver.getTitle());

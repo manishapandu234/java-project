@@ -1,10 +1,10 @@
-package Learn_selenium;
+package pim_tab;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Browser_invoke {
+public class emp_list {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver","D://manisha//chromedriver.exe");
@@ -23,10 +23,16 @@ public class Browser_invoke {
 		else
 		{
 			System.out.println("test case fail");
-			
 		}
+		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+		driver.findElement(By.name("txtPassword")).sendKeys("admin123");
+		driver.findElement(By.name("Submit")).click();
+        driver.findElement(By.xpath("//b[text()='Admin']")).click();
+		String emp_name=driver.findElement(By.xpath("//td[text()='Fiona Grace']")).getText();
+		driver.findElement(By.xpath("//b[text()='PIM']")).click();
+		driver.findElement(By.xpath("//input[@id='empsearch_employee_name_empName']")).sendKeys(emp_name);
 		
-		
-	}
 
+	
+}
 }
